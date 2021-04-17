@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Planino</title>
+    </head>
+    <body>
+        <h1>Update Info Page</h1>
+        <% data.forEach((info)=>{ %>
+            <%= info.description %><%= info.type %>
+            <form action="/update?_method=PUT" method="POST">
+            <label for="Type">Type: </label>
+            <input type="hidden" value="<%= info.type %>" name="hidden_name">
+            <input type="hidden" value="<%= info.description %>" name="hidden_description">
+            <input type="text" name="type" placeholder="Eg. Planets or Comets"><br>
+            <label for="Description">Description</label>
+            <textarea name="description" cols="30" rows="10"></textarea>
+            <input type="submit">
+        </form>
+        <% }) %>
+    </body>
+</html>

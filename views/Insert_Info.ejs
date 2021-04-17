@@ -1,0 +1,75 @@
+
+<html>
+    <head>
+        <title>Planinfo</title>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+        body {font-family: Arial, Helvetica, sans-serif;}
+        * {box-sizing: border-box;}
+        body{
+            background-image: url("http://images.unsplash.com/photo-1538370965046-79c0d6907d47?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMjA3fDB8MXxhbGx8fHx8fHx8fA&ixlib=rb-1.2.1&q=80&w=1080");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        input[type=text], select, textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+        }
+
+        input[type=submit] {
+        background-color: #2d3b73;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+        background-color: #a6b8ff;
+        }
+
+        .container {
+        border-radius: 5px;
+        background-color: #dce7fc;
+        padding: 20px;
+        }
+
+        h3{
+            color: white;
+            font-weight: bold;
+        }
+
+        </style>
+        </head>
+        <body>
+
+        <h3><center>Please give your Valuable Feedback!!</center></h3>
+        <h3><center>Return to <a href="/">Home Page</a></center></h3>
+        <br><br>
+
+        <div class="container">
+        <form action="/insert_info" method="POST">
+            <label for="type">Name</label>
+            <input type="text" name="type" placeholder="Your name..">
+
+            <label for="description">Comments/Suggestions</label>
+            <textarea name="description" placeholder="Write something.." style="height:200px"></textarea>
+
+            <center><input type="submit" name="submit" value="Submit"></center> 
+        </form>
+        <h3><center><a href="/display_info">View Previous Ones..</a></center></h3>
+        </div>
+
+        </body>
+        </html>
